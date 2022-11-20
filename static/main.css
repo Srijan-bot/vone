@@ -1,0 +1,380 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+
+
+body {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+
+
+
+
+  font-family: "Jura", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  --col-gap: 2rem;
+  --barH: 1rem;
+  --roleH: 2rem;
+  --flapH: 2rem;
+
+  width: min(60rem, 90%);
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--col-gap);
+  padding-inline: calc(var(--col-gap) / 2);
+
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+ul li {
+  width: 10em;
+  display: grid;
+  grid-template:
+    "role"
+    "icon"
+    "title"
+    "descr";
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: calc(var(--flapH) + 1rem);
+  text-align: center;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) var(--roleH),
+    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
+    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
+  );
+  clip-path: polygon(
+    calc(var(--col-gap) / -2 - 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
+    50% 100%,
+    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
+  );
+}
+
+/* bar */
+ul li::before {
+  content: "";
+  grid-area: role;
+  height: var(--barH);
+  width: calc(100% + var(--col-gap));
+  margin-left: calc(var(--col-gap) / -2);
+  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
+  background: grey;
+  z-index: -1;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* role */
+ul li::after {
+  content: "";
+  grid-area: role;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+  height: var(--roleH);
+}
+
+ul li .icon,
+ul li .title,
+ul li .descr {
+  padding-inline: 1rem;
+  color: white;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+ul li .icon {
+  font-size: 3rem;
+}
+ul li .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+ul li .descr {
+  font-size: 0.9rem;
+}
+
+.credits {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.credits a {
+  color: var(--color);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+body{
+  background:#0C001C;
+  color:#FFFFFF;
+}
+h2{
+  font-size:40px;
+}
+h3{
+  font-size:30px;
+}
+h2, h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+   display: flex;
+}
+
+p, ul li{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  max-width:1400px;
+  margin: auto;
+  height:100%;
+}
+
+.roadmap-wrapper{
+  height:auto;
+  width:100%;
+}
+
+.row{
+  width:100%;
+  display:grid;
+}
+
+.sec-title{
+ text-align:center;
+  position:relative;
+  width:auto;
+  margin-bottom:100px;
+}
+
+.sec-title:after{
+  position:absolute;
+  content:'';
+  width:50px;
+  height:5px;
+  background:linear-gradient(to right, #973EF1 , #3B37F9);
+  bottom:-20px;
+  left:48%;
+}
+
+.row .roadmap{
+  display:flex;
+}
+
+.row .roadmap .year-count{
+  width:20%;
+  background:#FFFFFF36;
+  height:auto;
+  border-right:1px solid #ffffff;
+  position:relative;
+}
+.row .roadmap .roadmap-content{
+  width:80%;
+}
+.row .roadmap .year-count h2{
+  font-size:80px;
+  color:#FFFFFF36;
+  transform:rotate(90deg) translateX(50px);
+}
+
+.row .roadmap .Y2022:before{
+  position:absolute;
+  content:'';
+  width:100%;
+  height:1px;
+  background:linear-gradient(to right, transparent, #ffffff);
+  top:0;
+  left:0;
+}
+
+.year-title h3{
+  padding-left:20px;
+  position:relative;
+}
+
+.year-title h3:before{
+  position:absolute;
+  content:'';
+  width:60px;
+  height:60px;
+  bottom:-31px;
+  left:0px;
+  border-radius:50%;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid #FFffff;
+  transform:rotate(-45deg);
+}
+
+
+.year-title h3:after{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  top:30px;
+  left:-5px;
+  border-radius:50%;
+  background:#0C001C;
+  border:1px solid #ffffff;
+}
+
+.year-title ul{
+  padding:0;
+  margin-left:30px;
+}
+.year-title ul li{
+  width: 25%;
+  list-style-type:none;
+  border-top:1px solid #ffffff;
+  padding-left:30px;
+  padding-top:50px;
+  position:relative;
+}
+
+.year-title ul li:before{
+  position:absolute;
+  content:'';
+  width:60px;
+  height:60px;
+  top:0px;
+  left:-30px;
+  border-radius:50%;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid #FFffff;
+  transform:rotate(-225deg);
+}
+
+.q1 ul li:after{
+  bottom:35px;
+  left:25px;
+}
+
+.q3 ul li:after{
+  top:25px;
+  left:25px;
+}
+
+.year-title ul li:after{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  bottom:60px;
+  left:27px;
+  border-radius:50%;
+  background:#0C001C;
+  border:1px solid #ffffff;
+}
+
+.year-title ul li:nth-last-child(1){
+  border-top:0px;
+}
+
+.q1 ul li:after{
+    top:25px;
+    left:25px;
+  }
+
+.q2 ul li:after{
+    top:25px;
+    left:25px;
+  }
+
+@media only screen and (max-width: 1220px){
+  .q2 ul li:after{
+    top:25px;
+    left:25px;
+  }
+  .q4 ul li:after{
+    top:25px;
+    left:25px;
+  }
+} 
+
+@media only screen and (max-width: 876px){
+  .q1 ul li:after{
+    top:25px;
+    left:25px;
+  }
+} 
+
+@media only screen and (max-width: 700px){
+  
+  .container{
+    max-width:100vw;
+    margin:0px 20px;
+  }
+  
+  .row .roadmap{
+    display:grid;
+  }
+  .row .roadmap .year-count{
+    width:100%;
+    text-align:center;
+    border-right:0px solid transparent;
+  }
+  
+  .row .roadmap .roadmap-content{
+    border-left: 1px solid #FFFFFF;
+  }
+  
+  .row .roadmap .year-count h2{
+    transform:rotate(0deg) translateX(0px) !important;
+  }
+  
+  .year-title ul{
+    display:grid;
+  }
+  
+  .year-title ul li{
+    border-top:0px solid transparent;
+    border-left:1px solid #FFFFFF;
+    width:100%;
+  }
+  .year-title ul li:nth-last-child(1){
+    border:0px;
+  }
+  
+  .q1-2022 ul li:after{
+    top:25px;
+    left:25px;
+  }
+  .row .roadmap .Y2022:before{
+    background:linear-gradient(to left, transparent, #ffffff);
+  }
+} 
