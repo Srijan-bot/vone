@@ -1,0 +1,110 @@
+{% extends 'nav.html' %}
+{% block title %}
+    EVA
+{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+{% endblock style %}
+
+{% block body %}
+<h1>PREPARE FOR</h1>
+<ul>
+    <li style="--accent-color:#0B374D">
+        <div class="icon"><i class="fa-brands fa-codepen"></i></div>
+        <div class="title">Codepen</div>
+        <div class="descr">Lorems ipsum dolor sit amet consectetur adipisicing elit. Soluta, impedit?</div>
+    </li>
+    <li style="--accent-color:#1286A8">
+        <div class="icon"><i class="fa-brands fa-html5"></i></div>
+        <div class="title">HTML 5</div>
+        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </li>
+    <li style="--accent-color:#D2B53B">
+        <div class="icon"><i class="fa-brands fa-css3"></i></div>
+        <div class="title">CSS 3</div>
+        <div class="descr">Lorem ipsum dolor sit.</div>
+    </li>
+    <li style="--accent-color:#DA611E">
+        <div class="icon"><i class="fa-brands fa-js"></i></div>
+        <div class="title">Javascript</div>
+        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laboriosam odio alias.</div>
+    </li>
+    <li style="--accent-color:#AC2A1A">
+        <div class="icon"><i class="fa-brands fa-github"></i></div>
+        <div class="title">Github</div>
+        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </li>
+</ul>
+
+
+<div class="container">
+  <div class="roadmap-wrapper">
+    <div class="row">
+      <h2 class="sec-title"> Our Roadmap </h2>
+    </div>
+    <div class="row">
+      <div class="roadmap">
+        <div class="year-count">
+          <h2>2021</h2>
+        </div>
+        <div class="roadmap-content">
+          <div class="year-title q1">
+           <h3>Q1</h3>
+            <ul> 
+              <li>MVP Implementation</li>
+            </ul>
+          </div>
+          <div class="year-title q2">
+           <h3>Q2</h3>
+            <ul> 
+              <li>Start developing Gitopia blockchain built with Cosmos SDK</li>
+              <li>Launch first version of Gitopia Webapp</li>
+              <li>Release the git remote helper for Gitopia</li>
+            </ul>
+          </div>
+          <div class="year-title q3">
+           <h3>Q3</h3>
+            <ul> 
+              <li>Release the GitHub Mirror Action for easy migration from GitHub</li>
+              <li>Gitopia Web Wallet release</li>
+              <li>Gitopia Explorer release</li>
+              <li>Exchange listings of LORE token</li>
+            </ul>
+          </div>
+          <div class="year-title q4">
+           <h3>Q4</h3>
+            <ul> 
+              <li>Ecosystem Partnerships</li>
+              <li>Release Organization/ Repository governance</li>
+              <li>Release IBC
+Interface</li>
+              <li>Launch Gitopia
+Desktop app</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="roadmap">
+        <div class="year-count Y2022">
+          <h2>2022</h2>
+        </div>
+        <div class="roadmap-content">
+          <div class="year-title q1-2022">
+           <h3>Q1</h3>
+            <ul> 
+              <li>Support CI/CD Integrations</li>
+              <li>Release Static Code Analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+{% endblock body %}

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/46363b1201.js" crossorigin="anonymous"></script>
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='logobg.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    {% block style %}
+        
+    {% endblock style %}
+</head>
+<body>
+
+    <div id="loader">LOADING....</div>
+    <header>
+        <h1 class="logo">
+         EVA
+        </h1>
+        <nav>
+         <button><a href="/">HOME</a> </button>
+         <button><a href="#about">About</a> </button>
+         <button><a href="/admin">ADMIN</a> </button>
+        </nav>
+        <button class="order-online"><a href="/contact">CONTACT US</a> </button>
+       </header>
+       <div>
+       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+       <defs>
+       <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+       </defs>
+       <g class="parallax">
+       <use xlink:href="#gentle-wave" x="48" y="0" fill="#3B37F9" />
+       <use xlink:href="#gentle-wave" x="48" y="3" fill="#3B37F9" />
+       <use xlink:href="#gentle-wave" x="48" y="5" fill="purple" />
+       <use xlink:href="#gentle-wave" x="48" y="7" fill="#973EF1" />
+       </g>
+       </svg>
+       </div>
+   
+   {% block body %} {% endblock body %}
+    <!-- Site footer -->
+    <footer id="about" class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">SRIJAN KUMAR <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. we focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
+              <b>NOTE:THIS WEBSITE IS ON FOR EXPRIMENTAL PURPOSE ONLY AND TAKEN DOWN WITHIN FEW DAYS.HOWEVER,YOU CAN SEND YOUR FEEDBACK ON <EMAIL:www class="mail">www.srijankumar@gmail.com</EMAIL:www></b>
+            </p>
+          </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Srijan Kumar</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+<script src="{{ url_for('static', filename='loader.js') }}"></script>
+
+<script>
+  var loader = document.getElementById("loader");
+
+window.addEventListener("loader",function(){
+  loader.style.display = "none";
+});
+</script>
+  
+</body>
+</html>
